@@ -1,0 +1,21 @@
+
+
+
+ <table>
+ <% @cars2.each do |row| %>
+    <tr><td> <%= row['Name'] %> </td>
+     
+     <td><%= row['Price'] %> </td>
+     
+    <td> <% row  %> </td>
+     <% end %>
+     </tr>
+</table>
+ 
+ <p>
+ 
+ <form action = '/insert' method="POST">
+     <input type="text" name="model">
+     <input type="text" name="price">
+     <input type="submit">
+ </form>

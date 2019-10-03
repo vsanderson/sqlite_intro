@@ -1,0 +1,39 @@
+
+<html>
+    
+<h3>Simple Car Database</h3>
+
+
+<table>
+   <tr> <th>ID</th><th>Name</th><th>Price</th></tr>
+<% @cars.each do |row| %>
+    <tr>
+        <td><%= row['ID'] %></td>
+        <td><%= row['NAME'] %></td>
+        <td><%= row['PRICE']%></td>
+    </tr>
+ <% end %>
+ </table>
+ 
+ <table>
+ <% @cars.each do |row| %>
+    <tr><td> <%= row['Name'] %> </td>
+     
+     <td><%= row['Price'] %> </td>
+     
+    <td> <% row  %> </td>
+     <% end %>
+     </tr>
+</table>
+     
+ 
+ <p>
+ 
+ <form action = '/insert' method="POST">
+     <input type="text" name="model">
+     <input type="text" name="price">
+     <input type="submit">
+ </form>
+ 
+</html>        
+

@@ -1,0 +1,16 @@
+
+
+
+ <% @cars2.each do |car| %>
+<%= car.name %><br>
+<%= car.price %>
+<% end %>
+     
+ 
+ <p>
+ 
+ <form action = '/insert' method="POST">
+     <input type="text" name="model">
+     <input type="text" name="price">
+     <input type="submit">
+ </form>
